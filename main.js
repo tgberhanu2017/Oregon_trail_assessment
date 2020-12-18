@@ -12,7 +12,7 @@ class Traveler {
        this.food +=2;
     }   
     eat () {
-       this.food -= 1; 
+    //    this.food -= 1; 
        if (this.food === 0){
            this.isHealthy = false;
 
@@ -41,7 +41,7 @@ if (this.passangers.length < this.capacity){
     }
 }
 shouldQuarantine(){
-for (let i= 0; i < this.passangers; i++){
+for (let i= 0; i < this.passangers.length; i++){
     
 if (this.passangers[i].isHealthy === false){
 return true;
@@ -52,7 +52,7 @@ return true;
 }
 totalFood() {
     let total = 0;
-    for (let i= 0; i < this.passangers; i++){
+    for (let i= 0; i < this.passangers.length; i++){
         total += this.passangers[i].food; 
     }
     return total; 
